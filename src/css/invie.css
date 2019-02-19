@@ -201,21 +201,79 @@ input:focus, textarea:focus {
 
 
 .guitarra {
-  margin: 10px 10px 40px 10px;
-  padding: 10px;
+  margin: 10px 0px 40px;
+  padding: 10px 2em;
   /*overflow: hidden;*/
   border: 1px solid #1F313C;
-  border-radius: 8px;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  /* alto minimo */
+  min-height: 250px;
+
+  transition: .3s;
+  position: relative;
+
 }
+
+.guitarra:hover{
+  /* box-shadow: eje X eje Y % color */
+  box-shadow: 10px 10px 0 #ff3149;
+}
+
+.guitarra:nth-of-type(even):hover{
+  box-shadow: -10px 10px 0 black;
+}
+
+
+.guitarra-name{
+  font-size: 3em;
+  margin: 0 0 .2e;
+  border-bottom: 2px dashed #1e313d;
+  padding-bottom: .2em;
+}
+
+.guitarra-image{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.guitarra:nth-of-type(even) .guitarra-image{
+  left: 0;
+  right: initial;
+}
+
 .guitarra ol {
   padding: 0;
+  /* quita los numeros de la lista */
+  list-style: none;
+  /* iniciando un contador de css feature es el nombre del contador */
+  counter-reset: feature;
 }
-.guitarra.b {
+.guitarra li::before{
+  /* incrementando el contador */
+  counter-increment: feature;
+  /* imprimiendo el contador */
+  content: counter(feature) ". ";
+}
+
+/* Seudo clase  */
+/* .guitarra:nth-of-type(odd) impares
+.guitarra:nth-of-type(even) pares */
+.guitarra:nth-of-type(even){
+
+  justify-content: flex-end;
+}
+
+
+/* .guitarra.b {
   height: 190px;
-}
+} */
 
 
-.derecha {
+/* .derecha {
   float: right;
   position: relative;
   top: -127px;
@@ -224,9 +282,9 @@ input:focus, textarea:focus {
 .izquierda {
   float: left;
   position: relative;
-}
+} */
 
-.contenedor-guitarra-a {
+/* .contenedor-guitarra-a {
   padding-left: 20px;
 }
 .contenedor-guitarra-b {
@@ -234,7 +292,7 @@ input:focus, textarea:focus {
   position: relative;
   bottom: 90px;
 
-}
+} */
 
 .header {
   position: relative;
