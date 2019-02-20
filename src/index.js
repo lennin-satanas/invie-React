@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/invie.css';
+import './css/animation.css';
 import Invie from './Invie';
 import * as serviceWorker from './serviceWorker';
 import cheet from 'cheet.js';
@@ -13,6 +14,8 @@ import { Provider } from 'react-redux';
 que recibe dos parámetros; una función y un objeto. 
 El objeto es el conjunto de elementos de mi aplicación y la función reducer será la que administra el dinamismo.*/
 import { createStore } from 'redux';
+import easterA from './images/easter-a.png';
+import easterB from './images/easter-b.png';
 
 
 
@@ -85,6 +88,28 @@ import { createStore } from 'redux';
         title: 'Home',
       },
    ],
+   guitarras:[
+    {
+      image: easterA,
+      alt: 'Guitarra Padre de familia',
+      name: 'Invie Familia',
+      features:[
+        'Lista para copiar a los Simpson',
+        'Aire puro',
+        'Chistes malos',
+      ]
+    },
+    {
+      image: easterB,
+      alt: 'Guitarra Invie anime',
+      name: 'Invie Anime',
+      features:[
+        'Estilo vintage',
+        'Liviana',
+        'Empieza tu camino como rockstart',
+      ]
+    }
+   ]
  }
 
  cheet('i n v i e',()=>{
