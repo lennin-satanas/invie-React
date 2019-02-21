@@ -20,6 +20,7 @@ import easterB from './images/easter-b.png';
 
 
  const initialState = {
+   isAnimated : false,
    menu: [
      {
        href: 'index.html',
@@ -82,6 +83,7 @@ import easterB from './images/easter-b.png';
  const store = createStore(reducer, initialState);
 
  const easter = {
+   isAnimated: 'is-animated',
    menu: [
       {
         href: 'index.html',
